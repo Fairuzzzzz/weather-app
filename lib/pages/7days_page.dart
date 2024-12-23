@@ -172,6 +172,64 @@ class _DaysPageState extends State<DaysPage> {
                 ),
               ),
             ],
+          ),
+          SizedBox(
+            height: 34,
+          ),
+          Column(
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 6),
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: 7,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 18),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Mon',
+                            style:
+                                TextStyle(color: Colors.white60, fontSize: 18),
+                          ),
+                          Row(
+                            children: [
+                              Image.asset(
+                                'assets/images/Snow.png',
+                                scale: 5,
+                              ),
+                              SizedBox(
+                                width: 12,
+                              ),
+                              Text('Snow',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 18))
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Text('+20',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 18)),
+                              SizedBox(
+                                width: 12,
+                              ),
+                              Text(
+                                '+14',
+                                style: TextStyle(color: Colors.white60),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              )
+            ],
           )
         ],
       )),

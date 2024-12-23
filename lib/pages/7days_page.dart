@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DaysPage extends StatefulWidget {
   const DaysPage({super.key});
@@ -13,9 +14,12 @@ class _DaysPageState extends State<DaysPage> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () => Navigator.of(context).pop(),
+            icon: Icon(Icons.arrow_back_ios_new_rounded)),
         title: Text(
           '7 Days',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
         ),
         centerTitle: true,
         iconTheme: IconThemeData(color: Colors.white),
@@ -89,9 +93,6 @@ class _DaysPageState extends State<DaysPage> {
               ],
             ),
           ),
-          SizedBox(
-            height: 12,
-          ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -99,10 +100,9 @@ class _DaysPageState extends State<DaysPage> {
               Expanded(
                 child: Column(
                   children: [
-                    Container(
-                      height: 12,
-                      width: 12,
-                      decoration: BoxDecoration(color: Colors.white),
+                    SvgPicture.asset(
+                      'assets/icons/Wind.svg',
+                      color: Colors.white,
                     ),
                     SizedBox(
                       height: 12,
@@ -124,10 +124,9 @@ class _DaysPageState extends State<DaysPage> {
               Expanded(
                 child: Column(
                   children: [
-                    Container(
-                      height: 12,
-                      width: 12,
-                      decoration: BoxDecoration(color: Colors.white),
+                    SvgPicture.asset(
+                      'assets/icons/Humidity.svg',
+                      color: Colors.white,
                     ),
                     SizedBox(
                       height: 12,
@@ -149,11 +148,8 @@ class _DaysPageState extends State<DaysPage> {
               Expanded(
                 child: Column(
                   children: [
-                    Container(
-                      height: 12,
-                      width: 12,
-                      decoration: BoxDecoration(color: Colors.white),
-                    ),
+                    SvgPicture.asset('assets/icons/Rain.svg',
+                        color: Colors.white),
                     SizedBox(
                       height: 12,
                     ),
@@ -174,7 +170,7 @@ class _DaysPageState extends State<DaysPage> {
             ],
           ),
           SizedBox(
-            height: 34,
+            height: 10,
           ),
           Column(
             children: [
@@ -191,18 +187,18 @@ class _DaysPageState extends State<DaysPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Mon',
+                            'Sun',
                             style:
                                 TextStyle(color: Colors.white60, fontSize: 18),
                           ),
                           Row(
                             children: [
                               Image.asset(
-                                'assets/images/Snow.png',
-                                scale: 5,
+                                'assets/images/Broken Cloud.png',
+                                scale: 6,
                               ),
                               SizedBox(
-                                width: 12,
+                                width: 14,
                               ),
                               Text('Snow',
                                   style: TextStyle(

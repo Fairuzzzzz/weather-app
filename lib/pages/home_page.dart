@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
         title: Text(
           'Yogyakarta',
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
         ),
         centerTitle: true,
       ),
@@ -66,10 +66,9 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       child: Column(
                         children: [
-                          Container(
-                            height: 12,
-                            width: 12,
-                            decoration: BoxDecoration(color: Colors.white),
+                          SvgPicture.asset(
+                            'assets/icons/Wind.svg',
+                            color: Colors.white,
                           ),
                           SizedBox(
                             height: 12,
@@ -92,10 +91,9 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       child: Column(
                         children: [
-                          Container(
-                            height: 12,
-                            width: 12,
-                            decoration: BoxDecoration(color: Colors.white),
+                          SvgPicture.asset(
+                            'assets/icons/Humidity.svg',
+                            color: Colors.white,
                           ),
                           SizedBox(
                             height: 12,
@@ -118,10 +116,9 @@ class _HomePageState extends State<HomePage> {
                     Expanded(
                       child: Column(
                         children: [
-                          Container(
-                            height: 12,
-                            width: 12,
-                            decoration: BoxDecoration(color: Colors.white),
+                          SvgPicture.asset(
+                            'assets/icons/Rain.svg',
+                            color: Colors.white,
                           ),
                           SizedBox(
                             height: 12,
